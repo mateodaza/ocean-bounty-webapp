@@ -1,4 +1,4 @@
-# Ocean Bounty WebdApp
+# Ocean Bounty dApp
 
 Ocean Protocol bounty made by QuillaLabs team
 
