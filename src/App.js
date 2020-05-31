@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-
-
 export default class App extends Component {
 
   state = {
     needToAWeb3Browser : false,
   }
+
   async getAddressFromMetaMask() {
     if (typeof window.ethereum == "undefined") {
       this.setState({ needToAWeb3Browser: true });
@@ -17,6 +16,7 @@ export default class App extends Component {
       this.setState({ accounts });
     }
   }
+
   async componentDidMount() {
     await this.getAddressFromMetaMask();
     if (this.state.accounts) {
@@ -25,6 +25,7 @@ export default class App extends Component {
  
     }
   }
+
   render() {
 
     if(this.state.needToAWeb3Browser){
